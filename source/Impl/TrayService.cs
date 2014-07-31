@@ -7,7 +7,9 @@
     {
         public void Show(string title, string message)
         {
-            //this.WindowState = FormWindowState.Minimized;
+            if (string.IsNullOrEmpty(message))
+                return;
+
             var notifyIcon = new NotifyIcon
             {
                 Icon = new Icon(SystemIcons.Application, 40, 40),

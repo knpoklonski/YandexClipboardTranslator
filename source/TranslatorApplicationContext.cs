@@ -14,9 +14,7 @@
             HotKeyManager.RegisterHotKey(Keys.T, KeyModifiers.Control);
             HotKeyManager.HotKeyPressed += HotKeyPressedHandle;
            
-            while (true)
-            {
-            }
+            Thread.SpinWait(int.MaxValue);
         }
 
         static void HotKeyPressedHandle(object sender, HotKeyEventArgs e)
